@@ -1,0 +1,39 @@
+<?php
+
+function conectar(){
+  $user="root";
+  $pass="";
+  $server="localhost";
+  $db="carros i4digital";
+  $con=mysql_connect($server,$user,$pass) or die ("Error Al Conectar A La Base De Datos".mysql_error());
+  mmysql_select_db($db,$con);
+
+  return $con;
+}
+$cedula = $_POST[´Cedula´];
+$modelo = $_POST[´Modelo´];
+$correo = $_POST[´Correo´];
+$recomendacion = $_POST[´Reco´];
+$factores = $_POST[´Factores´];
+$financiacion = $_POST[´Finan´];
+$busqueda = $_POST[´Proyeccion´];
+$colores = $_POST[´Color´];
+$usocar = $_POST[´Fam´];
+$motor = $_POST[´Elec´];
+$prueba = $_POST[´PManejo´];
+$calificacion = $_POST[´Satis´];
+
+echo "Su Numero De Cedula Es: $cedula.";
+echo "Su Modelo De Vehiculo Es: $modelo.";
+echo "Correo Electronico Digitado Es:$correo.";
+echo "Sus Recomendaciones: $recomendaciones.";
+echo "Factores: $factores.";
+echo "Metodo De Financiacion: $financiacion.";
+echo "Tu Proyeccion Es: $busqueda.";
+echo "El Color Seleccionado Para El Vehiculo: $colores.";
+echo "Tipo De Uso Para El Vehiculo: $usocar.";
+echo "Tipo De Motor Seleccionado: $motor.";
+echo "Calificacion En Prueba De Manejo: $prueba.";
+echo "Tu Valoracion Al Servicio Proporcionado: $calificacion.";
+
+?>

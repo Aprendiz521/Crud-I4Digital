@@ -1,0 +1,8 @@
+<?php
+incluide("conexion.php");
+
+$con=conectar();
+
+echo "Se Realizo Exitosamente La Conecion A La Base De Datos"
+
+?>
